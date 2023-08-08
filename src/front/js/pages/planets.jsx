@@ -5,15 +5,15 @@ import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { Card } from "../component/card.jsx";
 
-export const CharacterPage = () => {
-  const { character_id } = useParams();
-  const [character, setCharacter] = useState({});
+export const PlanetPage = () => {
+  const { planet_id } = useParams();
+  const [planet, setPlanet] = useState({});
 
   useEffect(() => {
-    fetch(`https://swapi.dev/api/people/${character_id}`)
+    fetch(`https://swapi.dev/api/planets/${planet_id}`)
       //   fetch(`https://swapi.dev/api/people/6`)
       .then((resp) => resp.json())
-      .then((data) => setCharacter(data));
+      .then((data) => setPlanet(data));
   }, []);
 
   return (
@@ -21,26 +21,27 @@ export const CharacterPage = () => {
       <Card width="25rem">
         <h1 className="card-title text-center text-warning-emphasis">
           {" "}
-          {character.name}
+          {planet.name}
         </h1>
         <ul className="list-group list-group-flush">
           <li className="list-group-item border-0">
-            Gender: {character.gender}
+            Diameter: {planet.diameter}
           </li>
           <li className="list-group-item border-0">
-            Hair Color: {character.hair_color}
+            Population: {planet.population}
           </li>
-          <li className="list-group-item">Eye Color: {character.eye_color}</li>
+          <li className="list-group-item">Climate: {planet.climate}</li>
           <span className="text-uppercase fs-4 text text-center text-info-emphasis mt-3">
             Extra Details
           </span>
           <li className="list-group-item border-0">
-            Birth Year: {character.birth_year}
+            Rotation Period: {planet.roation_period}
             <br />
-            Skin Color: {character.skin_color}
+            Orbital Period: {planet.oribital_period}
             <br />
-            Height: {character.height} <br />
-            Mass: {character.mass} <br />
+            Gravity: {planet.gravity} <br />
+            Terrain: {planet.terrain} <br />
+            Surface Water: {planet.surface_water} <br />
           </li>
         </ul>
       </Card>

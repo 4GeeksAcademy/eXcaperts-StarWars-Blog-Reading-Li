@@ -1,6 +1,6 @@
 import React, { Children } from "react";
 
-export const Card = ({ width = "18rem", children, buttonText, buttons}) => {
+export const Card = ({ width = "18rem", children, buttonText, buttons }) => {
   const style = {
     width: width,
   };
@@ -8,7 +8,7 @@ export const Card = ({ width = "18rem", children, buttonText, buttons}) => {
   return (
     <div className="card mx-3 p-0" style={style}>
       <img
-        src="http://placehold.it/400x200"
+        src="https://placehold.it/400x200"
         className="card-img-top"
         alt="..."
       />
@@ -24,7 +24,7 @@ export const Card = ({ width = "18rem", children, buttonText, buttons}) => {
         <a href="#" className="col col-auto btn btn-outline-warning "><i class="fa-solid fa-heart"></i>
         </a>
       </div> */}
-        </div>
+      </div>
     </div>
   );
 };

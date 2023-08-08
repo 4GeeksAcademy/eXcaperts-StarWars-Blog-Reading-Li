@@ -10,7 +10,7 @@ export const VehiclePage = () => {
   const [vehicle, setVehicle] = useState({});
 
   useEffect(() => {
-    fetch(`https://swapi.dev/api/vehicle/${vehicle_id}`)
+    fetch(`https://swapi.dev/api/vehicles/${vehicle_id}/`)
       //   fetch(`https://swapi.dev/api/people/6`)
       .then((resp) => resp.json())
       .then((data) => setVehicle(data));

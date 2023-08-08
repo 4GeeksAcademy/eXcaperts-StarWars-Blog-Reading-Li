@@ -9,6 +9,7 @@ import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 import { CharacterPage } from "./pages/characters.jsx";
 import { VehiclePage } from "./pages/vehicles.jsx";
+import { PlanetPage } from "./pages/planets.jsx";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -34,6 +35,7 @@ const Layout = () => {
               path="/characters/:character_id"
             />
             <Route element={<VehiclePage />} path="/vehicles/:vehicle_id" />
+            <Route element={<PlanetPage />} path="/planets/:planet_id" />
             <Route element={<Demo />} path="/demo" />
             <Route element={<Single />} path="/single/:theid" />
             <Route element={<h1>Not found!</h1>} />
